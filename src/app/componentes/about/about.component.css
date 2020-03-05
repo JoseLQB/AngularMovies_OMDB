@@ -1,0 +1,14 @@
+.container{
+    background-color: azure;
+}
+
+img{
+    border-radius: 1%;
+}
+
+img:hover{
+    border-radius: 22%;
+}
+
+
+

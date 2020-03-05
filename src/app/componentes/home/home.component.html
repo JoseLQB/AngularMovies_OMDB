@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="mb-0 text-center">Te recomendamos tus películas y series de hoy</h3>
+        </div>
+        <div class="card-body text-center">
+            <form #formPeli="ngForm" (ngSubmit)="onSubmit('titulo')" class="form" role="form" method="POST">
+                <button type="submit" class="btn btn-outline-secondary">¿Qué voy a ver hoy?</button>
+            </form>
+        </div>
+    <div class="row">
+        <!--Recorro el array con los datos de la película-->
+        <div *ngFor="let dato of datos" class="col-4 my-3">
+                <div class="card">
+                    <img src="{{dato.Poster}}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{dato.Title}} ({{dato.Year}})</h5>
+                        <p>{{dato.Plot}}</p>
+                        <a href="https://www.imdb.com/title/{{dato.imdbID}}" target="_blank">Ficha en IMDB</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

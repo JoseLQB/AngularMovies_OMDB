@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="mb-0 text-center">Busca información sobre cualquier película</h3>
+        </div>
+        <!--Formulario de búsqueda de la película-->
+        <div class="card-body text-center" id="form">
+            <form #formPeli="ngForm" (ngSubmit)="onSubmit('titulo')" class="form" role="form" method="POST">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="text" name="nombre" #nombre="ngModel" placeholder="Escribe el título original de una película" [(ngModel)]="titulo" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
+                
+                  </div>
+                <button type="submit" class="btn btn-outline-secondary">Buscar</button>
+            </form>
+        </div>
+    <div class="row">
+        <!--Recorro el array con los datos de la película-->
+        <div *ngFor="let dato of datos" class="col-4 my-3">
+                <div class="card">
+                    <img src="{{dato.Poster}}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{dato.Title}} ({{dato.Year}})</h5>
+                        <p>{{dato.Plot}}</p>
+                        <a href="https://www.imdb.com/title/{{dato.imdbID}}" target="_blank">Ficha en IMDB</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
