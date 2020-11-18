@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-Jose": {
+    "angular-movies": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-Jose",
+            "outputPath": "dist/angular-movies",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-Jose:build"
+            "browserTarget": "angular-movies:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-Jose:build:production"
+              "browserTarget": "angular-movies:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-Jose:build"
+            "browserTarget": "angular-movies:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-Jose:serve"
+            "devServerTarget": "angular-movies:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-Jose:serve:production"
+              "devServerTarget": "angular-movies:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-Jose",
+  "defaultProject": "angular-movies",
   "cli": {
     "analytics": "6e1ad66f-bd8a-408c-90b6-89d6832071c9"
   }
